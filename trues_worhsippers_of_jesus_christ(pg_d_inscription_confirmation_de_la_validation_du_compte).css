@@ -1,0 +1,284 @@
+ 
+ 
+ /* suppression de marges sur les éléments de base */
+ html, body, form, ul, ol, blockquote, h1, h2, h3, footer
+ {
+     margin : 0;
+     padding : 0;
+ }
+
+/* fin suppression de marges sur les éléments de base */
+
+/* body */
+body{
+    background-image: url(christmas-baubles-1869989_1920.jpg);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+/* fin body */
+
+/* création de l'ombre sous tout le contenu de la page */
+#ombre2{
+    width: 100%;
+    height : 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-color : rgba(0, 0, 23, 0.70);
+}
+
+/* fin création de l'ombre sous tout le contenu de la page */
+
+
+/* design de l'entête */
+    /* design du contenaire principal */
+    header
+    {
+        position: relative;
+        transition: 0.8s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 20px 50px; 
+    }
+
+
+    /* fin  design contenaire principal*/
+
+
+    /*header .logo{
+        max-width: 50%;
+        border: 2px solid #000014df;
+    }*/
+
+    /* design du conteneur des menus de navigation */
+    header>ul
+    {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        
+    }
+    /*fin design conteneur des menus de navigation */
+
+
+    /* design de menus */
+    header li
+    {
+        padding: 3px 15px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        padding : 20px 30px;
+    }
+
+    header li>a
+    {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(255, 242, 255);
+        color: #fff2ffff;
+
+    }  
+    /*fin design de menus */
+
+    /* design bouton inscription/connexion */
+ 
+    .connexion button
+    {
+        font-weight: bold;
+        padding: 3px 15px;
+        font-size: 17px;
+        border : none;
+        background: transparent;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 8px;
+        transition: 0.8s;
+    }
+
+    
+    .connexion button>a
+    {
+        color: rgb(255, 242, 255);
+        color : #fff2ffff;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .connexion button
+    {
+    border : 1px solid #fe0000ff;
+    border-top-color: transparent;
+    border-left-color : transparent;
+    }
+    /*fin design bouton inscripition/connexion */
+
+    /*le bouton du menu hembourgoise */
+    header .hambougoise_menu{
+        display:none;
+    }
+    /*fin le bouton du menu hembourgoise*/
+
+/*fin design entête */
+
+
+
+/* corps de la page */
+    /* toutes les sections*/
+    section{
+        font-family: Gadugi, sans-serif;
+        color: #fff2ffff;
+        padding: 0 80px;
+    }
+
+    section span{
+        color : #fe0000ff;
+    }
+
+    /* fin toutes les sections*/
+
+    /* section bienvenue */
+    #bienvenue{
+        padding-top: 200px;
+    }
+
+    #bienvenue h3{
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    #bienvenue h3+p{
+        position: relative;
+        text-align: center;
+    }
+    #bienvenue h3+p::after{
+        position: absolute;
+        content: "";
+        width: 20px;
+        background-color: #fe0000ff;
+        height: 3px;
+    }
+    #bienvenue h3+p::before{
+        position: absolute;
+        bottom: 0;
+        left : 100px;
+        content: "";
+        width: 20px;
+        background-color: #fe0000ff;
+        height: 3px;
+    }
+
+    #bienvenue p{
+        font-size: 24px;
+    }
+
+    /*  fin section bienvenue*/
+
+    /*  section souhait*/
+    #souhait{
+        padding-top: 200px;
+        padding-bottom: 250px;
+    }
+
+    #souhait p{
+        padding: 50px 20px;
+        border: 2px solid #fff2ffff;
+        font-size: 24px;
+    }
+    /*  fin section souhait*/
+
+/* fin corps de la page */
+
+
+/* les animation */
+
+
+    /* l'entete */
+header li::before{
+    content: "";
+    position: absolute;
+    background-color: #fff2ffff;
+    height : 2px;
+    width: 40px;  
+    top: 0;
+    left : 0;
+    opacity: 0;
+  }
+  
+  header li::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 70px;  
+      bottom: 0;
+      left :0;
+      opacity:0;
+  }
+  header li:hover::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 70px;  
+      bottom: 0;
+      left :0;
+      transition: 0.8s;
+      opacity: 1;
+  }
+  header li:hover::before{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 40px;  
+      top: 0;
+      left : 0;
+      opacity: 1;
+      transition: 0.8s;
+      transform:rotate(45deg)
+  }
+  
+  header li::before{
+    content: "";
+    position: absolute;
+    background-color: #fff2ffff;
+    height : 0px;
+    width: 0px;  
+    top: 0;
+    left : 0;
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  header li::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 0px;
+      width: 0px;  
+      bottom: 0;
+      left :0;
+      opacity: 1;
+      transition: 1s;
+  
+  }
+  
+  header li::before{
+      content: "";
+      position: absolute;
+      background-color: red;
+      height : 10px;
+      width: 20px;
+  }
+
+  header .connexion button:hover{
+    border-top : 1px solid blue;
+    transition : 0.8s
+  }
+  
+/* fin entete */

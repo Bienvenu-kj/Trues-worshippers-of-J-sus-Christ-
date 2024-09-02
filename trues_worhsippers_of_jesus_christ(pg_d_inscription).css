@@ -1,0 +1,301 @@
+ 
+ 
+ /* suppression de marges sur les éléments de base */
+ html, body, form, ul, ol, blockquote, h1, h2, h3, footer
+ {
+     margin : 0;
+     padding : 0;
+ }
+
+/* fin suppression de marges sur les éléments de base */
+
+/* body */
+body{
+    background-image: url(inscription_bg1.png);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+/* fin body */
+
+/* création de l'ombre sous tout le contenu de la page */
+#ombre2{
+    width: 100%;
+    height : 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-color : rgba(0, 0, 26, 0.568);
+}
+
+/* fin création de l'ombre sous tout le contenu de la page */
+
+
+/* design de l'entête */
+    /* design du contenaire principal */
+    header
+    {
+        position: relative;
+        transition: 0.8s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 20px 50px; 
+    }
+
+
+    /* fin  design contenaire principal*/
+
+
+    /*header .logo{
+        max-width: 50%;
+        border: 2px solid #000014df;
+    }*/
+
+    /* design du conteneur des menus de navigation */
+    header>ul
+    {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        
+    }
+    /*fin design conteneur des menus de navigation */
+
+
+    /* design de menus */
+    header li
+    {
+        padding: 3px 15px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        padding : 20px 30px;
+    }
+
+    header li>a
+    {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(255, 242, 255);
+        color: #fff2ffff;
+
+    }  
+    /*fin design de menus */
+
+    /* design bouton inscription/connexion */
+ 
+    .connexion button
+    {
+        font-weight: bold;
+        padding: 3px 15px;
+        font-size: 17px;
+        border : none;
+        background: transparent;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 8px;
+        transition: 0.8s;
+    }
+
+    
+    .connexion button>a
+    {
+        color: rgb(255, 242, 255);
+        color : #fff2ffff;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .connexion button
+    {
+    border : 1px solid #fe0000ff;
+    border-top-color: transparent;
+    border-left-color : transparent;
+    }
+    /*fin design bouton inscripition/connexion */
+
+    /*le bouton du menu hembourgoise */
+    header .hambougoise_menu{
+        display:none;
+    }
+    /*fin le bouton du menu hembourgoise*/
+
+/*fin design entête */
+
+
+
+/* corps de la page */
+
+/* formulaire */
+#formulaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20% 0;
+}
+
+#formulaire h3{
+    color : rgb(255, 242, 255);
+    font-size: 60px;
+    margin-bottom: 10%;
+}
+
+#form_contain{
+    position: relative;
+    display: flex;
+    border: 2px solid rgb(255, 242, 255);
+    border-radius: 10px;
+    height: 500px;
+}
+.partiegauche img{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    height: 100%;
+    width: 100%;
+
+}
+.partiedroite{
+    padding: 70px 80px;
+}
+
+.partiedroite form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.partiedroite form .arrangeur{
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 16px;
+    width : 360px;
+    height: 40px;
+    z-index: 2;
+}
+.partiedroite form .arrangeur1{
+    margin-bottom: 60px;
+}
+
+.partiedroite form #arrangeur{
+    font-weight: bold;
+    font-size: 20px;
+
+    width: 100%;
+    margin-top: 80px;
+    height: 50px;
+    
+}
+
+.partiedroite form #arrangeur, .partiedroite form .arrangeur{
+    border: 2px solid rgb(255, 242, 255);
+    border-radius: 10px;
+    color : rgb(255, 242, 255);
+    background: transparent;
+}
+
+.partiedroite p{
+    font-size: 18px;
+    font-weight: bold;
+    color : #fff2ffff;
+    margin-top: 60px;
+}
+.partiedroite p a{
+    color : #fe0000ff;
+    text-decoration: none;
+}
+
+/* fin corps de la page */
+
+
+
+/* les animation */
+
+
+/* l'entete */
+header li::before{
+    content: "";
+    position: absolute;
+    background-color: #fff2ffff;
+    height : 2px;
+    width: 40px;  
+    top: 0;
+    left : 0;
+    opacity: 0;
+  }
+  
+  header li::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 70px;  
+      bottom: 0;
+      left :0;
+      opacity:0;
+  }
+  header li:hover::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 70px;  
+      bottom: 0;
+      left :0;
+      transition: 0.8s;
+      opacity: 1;
+  }
+  header li:hover::before{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 40px;  
+      top: 0;
+      left : 0;
+      opacity: 1;
+      transition: 0.8s;
+      transform:rotate(45deg)
+  }
+  
+  header li::before{
+    content: "";
+    position: absolute;
+    background-color: #fff2ffff;
+    height : 0px;
+    width: 0px;  
+    top: 0;
+    left : 0;
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  header li::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 0px;
+      width: 0px;  
+      bottom: 0;
+      left :0;
+      opacity: 1;
+      transition: 1s;
+  
+  }
+  
+  header li::before{
+      content: "";
+      position: absolute;
+      background-color: red;
+      height : 10px;
+      width: 20px;
+  }
+
+  header .connexion button:hover{
+    border-top : 1px solid blue;
+    transition : 0.8s
+  }
+  
+/* fin entete */

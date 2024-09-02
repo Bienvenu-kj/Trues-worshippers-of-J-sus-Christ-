@@ -1,0 +1,300 @@
+ 
+ 
+ /* suppression de marges sur les éléments de base */
+ html, body, form, ul, ol, blockquote, h1, h2, h3, footer
+ {
+     margin : 0;
+     padding : 0;
+ }
+
+/* fin suppression de marges sur les éléments de base */
+
+/* body */
+body{
+    background-image: url(priscilla-du-preez-9CMUPez8wLo-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+/* fin body */
+
+/* création de l'ombre sous tout le contenu de la page */
+#ombre2{
+    width: 100%;
+    height : 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-color : rgba(0, 0, 23, 0.64);
+}
+
+/* fin création de l'ombre sous tout le contenu de la page */
+
+
+/* design de l'entête */
+    /* design du contenaire principal */
+    header
+    {
+        position: relative;
+        transition: 0.8s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 20px 50px; 
+    }
+
+
+    /* fin  design contenaire principal*/
+
+
+    /*header .logo{
+        max-width: 50%;
+        border: 2px solid #000014df;
+    }*/
+
+    /* design du conteneur des menus de navigation */
+    header>ul
+    {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        
+    }
+    /*fin design conteneur des menus de navigation */
+
+
+    /* design de menus */
+    header li
+    {
+        padding: 3px 15px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        padding : 20px 30px;
+    }
+
+    header li>a
+    {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 17px;
+        color: rgb(255, 242, 255);
+        color: #fff2ffff;
+
+    }  
+    /*fin design de menus */
+
+    /* design bouton inscription/connexion */
+ 
+    .connexion button
+    {
+        font-weight: bold;
+        padding: 3px 15px;
+        font-size: 17px;
+        border : none;
+        background: transparent;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 8px;
+        transition: 0.8s;
+    }
+
+    
+    .connexion button>a
+    {
+        color: rgb(255, 242, 255);
+        color : #fff2ffff;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .connexion button
+    {
+    border : 1px solid #fe0000ff;
+    border-top-color: transparent;
+    border-left-color : transparent;
+    }
+    /*fin design bouton inscripition/connexion */
+
+    /*le bouton du menu hembourgoise */
+    header .hambougoise_menu{
+        display:none;
+    }
+    /*fin le bouton du menu hembourgoise*/
+
+/*fin design entête */
+
+
+
+/* corps de la page */
+    /* toutes les sections */
+    #formulaire, #remarque{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* fin toutes les sections */
+
+    /* seciton information*/
+    #information{
+        font-family: Gadugi, sans-serif;
+        color :#fff2ffff;
+        display: flex;
+        padding-right: 80px;
+        padding-left: 80px;
+        flex-direction: column;
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
+    #information h3{
+        text-align:center;
+        font-size: 50px;
+    }
+    #information h3+p{
+        text-align: center;
+    }
+    #information p{
+        font-size: 30px;
+    }
+
+    #information p span{
+        color :#fe0000ff;
+    }
+
+    /* fin section information*/
+
+    /* section formulaire */
+    #formulaire{
+        font-family: Gadugi, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid blue;
+        gap: 30px;
+
+    }
+    #formulaire h4{
+        color :#fe0000ff;
+        font-size: 20px;
+    }
+
+    #formulaire form{
+        display: flex;
+        gap: 15px;
+
+    }
+
+    #formulaire form input{
+        font-size: 15px;
+        font-weight: bold;
+        border: solid #fff2ffff 2px;
+        color :#fff2ffff;
+        background: transparent;
+        padding: 5px 20px;
+    }
+    /* fin section formulaire*/
+
+    /* section note*/
+    #remarque{
+        font-family: Gadugi, sans-serif;
+        color: #fff2ffff;
+        padding-top: 80px;
+        padding-bottom: 20%;
+    }
+    #remarque p{
+        font-size: 20px;
+    }
+
+    /* fin section note */
+
+/* fin corps de la page */
+
+
+/* les animation */
+
+
+    /* l'entete */
+header li::before{
+    content: "";
+    position: absolute;
+    background-color: #fff2ffff;
+    height : 2px;
+    width: 40px;  
+    top: 0;
+    left : 0;
+    opacity: 0;
+  }
+  
+  header li::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 70px;  
+      bottom: 0;
+      left :0;
+      opacity:0;
+  }
+  header li:hover::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 70px;  
+      bottom: 0;
+      left :0;
+      transition: 0.8s;
+      opacity: 1;
+  }
+  header li:hover::before{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 2px;
+      width: 40px;  
+      top: 0;
+      left : 0;
+      opacity: 1;
+      transition: 0.8s;
+      transform:rotate(45deg)
+  }
+  
+  header li::before{
+    content: "";
+    position: absolute;
+    background-color: #fff2ffff;
+    height : 0px;
+    width: 0px;  
+    top: 0;
+    left : 0;
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  header li::after{
+      content: "";
+      position: absolute;
+      background-color: #fff2ffff;
+      height : 0px;
+      width: 0px;  
+      bottom: 0;
+      left :0;
+      opacity: 1;
+      transition: 1s;
+  
+  }
+  
+  header li::before{
+      content: "";
+      position: absolute;
+      background-color: red;
+      height : 10px;
+      width: 20px;
+  }
+
+  header .connexion button:hover{
+    border-top : 1px solid blue;
+    transition : 0.8s
+  }
+  
+/* fin entete */

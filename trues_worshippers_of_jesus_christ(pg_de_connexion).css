@@ -1,0 +1,153 @@
+/* animations*/
+.connexion button:hover
+{
+border-top-color: #fe0000ff;
+transition:0.5s;
+border-left-color : #fe0000ff;
+
+}
+.header ul li:hover{
+    cursor: move #fe0000ff;
+}
+
+
+/* fin animations */
+
+/* body */
+body{
+    background-image: url(plant-4781624.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* fin body*/
+
+/* création de l'ombre sous tout le contenu de la page */
+#ombre1{
+    width: 100%;
+    height : 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-color : rgba(0, 0, 26, 0.34);
+}
+
+/* fin création de l'ombre sous tout le contenu de la page */
+
+/* header*/
+header, header li, .connexion button{
+    background: transparent;
+}
+header ul li{
+    border: 1px solid #fe0000ff;
+    position: relative;
+    overflow: hidden;
+}
+header ul li::after{
+position : absolute;
+top: -20px;
+right: -30px;
+content: "";
+border-radius: 0;
+background-color: #fe0000ff;
+height: 80px;
+width: 50px;
+transform: rotate(-30deg);
+}
+
+
+header li>a
+{
+    font-size: 18px;
+
+}  
+
+.connexion button
+{
+border : 1px solid #fe0000ff;
+border-top-color: transparent;
+border-left-color : transparent;
+}
+
+/* fin header*/
+
+/* corps de la page */
+
+/* formulaire */
+#formulaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20% 0;
+}
+
+#formulaire h3{
+    color : rgb(255, 242, 255);
+    font-size: 60px;
+    margin-bottom: 10%;
+}
+
+#form_contain{
+    position: relative;
+    display: flex;
+    border: 2px solid rgb(255, 242, 255);
+    border-radius: 10px;
+    height: 500px;
+}
+.partiegauche img{
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    height: 100%;
+    width: 100%;
+
+}
+.partiedroite{
+    padding: 70px 80px;
+}
+
+.partiedroite form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.partiedroite form .arrangeur{
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 16px;
+    width : 360px;
+    height: 40px;
+    z-index: 2;
+}
+.partiedroite form .arrangeur1{
+    margin-bottom: 60px;
+}
+
+.partiedroite form #arrangeur{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 80px;
+    height: 50px;
+}
+.partiedroite form #arrangeur, .partiedroite form .arrangeur{
+    border: 2px solid rgb(255, 242, 255);
+    border-radius: 10px;
+    color : rgb(255, 242, 255);
+    background: transparent;
+}
+
+.partiedroite p{
+    font-size: 18px;
+    font-weight: bold;
+    color : #fff2ffff;
+    margin-top: 60px;
+}
+.partiedroite p a{
+    color : #fe0000ff;
+    text-decoration: none;
+}
+
+/* fin corps de la page */
